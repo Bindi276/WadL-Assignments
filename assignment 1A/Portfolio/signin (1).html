@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My portfolio</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/portfolio/Favicon.png">
+
+  <!-- Bootstrap 5 CDN Links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Custom File's Link -->
+  <link rel="stylesheet" href="signin.css">
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="left">
+      <h3>Portfolio</h3>
+      <img src="images/Myprofile.png" >
+    </div>
+
+
+    <div class="right">
+      <div class="tabs">
+        <ul>
+          <li class="login_li">login</li>
+        </ul>
+      </div>
+
+      <!-- <form id="LoginForm" onsubmit="return false"> -->
+      <div class="login">
+        <div class="input_field">
+          <input type="text" size="15" id="Username" placeholder="Username" name="Username" class="input">
+        </div>
+        <!-- <div class="input_field">
+          <input type="text" placeholder="Email" name="Email"class="input">
+        </div> -->
+        <div class="input_field">
+          <input type="Password"size="15" id="Password" placeholder="Password" name="Password" class="input">
+        </div>
+
+        <!-- <div class="btn"><a href="index.html">Login</a></div> -->
+        <button id="login" type="button" a href="index.html">Login</button></br>
+      </div>
+
+    </div>
+  </div>
+  <div ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.576189725421!2d73.84864491484174!3d18.457542087445738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eac85230ba47%3A0x871eddd0a8a0a108!2sSCTR&#39;S%20Pune%20Institute%20of%20Computer%20Technology!5e0!3m2!1sen!2sin!4v1643258004861!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+  <script>
+function login() {
+  if ($("#Username").val() == "Bindi" && $("#Password").val() == "password") {
+    alert("You are a valid user");
+    
+  } else {
+    alert("You are not a valid user");
+  };
+}
+  </script>
+</body>
+
+</html>

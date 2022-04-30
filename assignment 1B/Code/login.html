@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Login</title>
+
+    <!--attaching stylesheet for custom css, Bootstrap 5, Chartist and FontAwesome-->
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+    
+    <div id="login-form-wrap">
+        <h2>Login</h2>
+        <form id="form-signin">
+          <p>
+          <input type="text" id="userid" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
+          </p>
+          <p>
+          <input type="email" id="pswd" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
+          </p>
+          <p>
+            <button class="btn btn-primary btn-lg" id="login" type="button"
+            onClick="getUser()"><a style="color:white;" href="index.html">Login</a></button>          </p>
+        </form>
+        <div id="create-account-wrap">
+          <p>Not a member? <a href="#"> Welcome to my new Project </a><p>
+        </div>
+      </div>
+
+    
+    <script type="text/javascript">
+        let data = {}  
+        function getUser() {
+                 
+            var id = $("#userid").val();
+            var pswd = $("#pswd").val();
+    
+            if(id != '' && pswd != ''){
+                
+                console.log("User ID = ", id);
+                console.log("User Pswd = ", pswd);
+
+                data[id] = pswd;
+                console.log("Pushed data = ", data[id]);
+
+                var msg = id + ":" + data[id] + "\n";
+
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.open("POST", "user.txt", true);            
+
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                xhttp.send(msg);
+                
+                msg = "Successfully logged in as " + id;
+
+                alert(msg);
+
+                
+            }
+            else{
+                alert("Please enter valid credentials!");
+            }
+        }
+    </script>
+</body>
+</html>
